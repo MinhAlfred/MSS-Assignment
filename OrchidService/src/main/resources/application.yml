@@ -16,6 +16,20 @@ spring:
 server:
   port: 8082
 
+# SpringDoc OpenAPI Configuration
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  show-actuator: true
+  group-configs:
+    - group: 'orchid-service'
+      display-name: 'Orchid Service API'
+      paths-to-match: '/**'
+
 eureka:
   client:
     serviceUrl:

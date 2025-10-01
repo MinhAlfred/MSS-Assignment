@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/ApiGateway/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/ApiGateway/README.md" />
+              <option name="updatedContent" value="# API Gateway Swagger Configuration&#10;&#10;This API Gateway has been configured with Swagger/OpenAPI documentation for easy API testing and documentation.&#10;&#10;## Features&#10;&#10;- **Swagger UI**: Interactive API documentation&#10;- **ApiResponse Wrapper**: Standardized response format for all APIs&#10;- **Global Exception Handling**: Consistent error responses&#10;- **Route Documentation**: All microservice routes are documented&#10;&#10;## Accessing Swagger UI&#10;&#10;Once the gateway is running, you can access:&#10;&#10;- **Swagger UI**: `http://localhost:8080/swagger-ui/index.html`&#10;- **API Docs JSON**: `http://localhost:8080/api-docs`&#10;- **Gateway Health**: `http://localhost:8080/gateway/health`&#10;- **Gateway Routes**: `http://localhost:8080/gateway/routes`&#10;- **Gateway Info**: `http://localhost:8080/gateway/info`&#10;&#10;## ApiResponse Format&#10;&#10;All API responses are wrapped in a standard format:&#10;&#10;```json&#10;{&#10;  &quot;success&quot;: true,&#10;  &quot;message&quot;: &quot;Operation successful&quot;,&#10;  &quot;data&quot;: { /* actual response data */ },&#10;  &quot;timestamp&quot;: &quot;2025-10-01 10:30:45&quot;&#10;}&#10;```&#10;&#10;### Success Response&#10;```json&#10;{&#10;  &quot;success&quot;: true,&#10;  &quot;message&quot;: &quot;Operation completed successfully&quot;,&#10;  &quot;data&quot;: { /* your data here */ },&#10;  &quot;timestamp&quot;: &quot;2025-10-01 10:30:45&quot;&#10;}&#10;```&#10;&#10;### Error Response&#10;```json&#10;{&#10;  &quot;success&quot;: false,&#10;  &quot;message&quot;: &quot;Error description&quot;,&#10;  &quot;data&quot;: null,&#10;  &quot;timestamp&quot;: &quot;2025-10-01 10:30:45&quot;&#10;}&#10;```&#10;&#10;## Available Routes&#10;&#10;The gateway routes requests to the following microservices:&#10;&#10;- **Account Service**: `/api/accounts/**` → `account-service`&#10;- **Order Service**: `/api/orders/**` → `order-service`  &#10;- **Orchid Service**: `/api/orchids/**` → `orchid-service`&#10;&#10;## Gateway Management Endpoints&#10;&#10;- `GET /gateway/health` - Check gateway health&#10;- `GET /gateway/routes` - List all configured routes&#10;- `GET /gateway/info` - Get gateway information&#10;&#10;## Running the Gateway&#10;&#10;1. Make sure Eureka service is running on `http://localhost:8761`&#10;2. Start the microservices (account-service, order-service, orchid-service)&#10;3. Run the API Gateway:&#10;   ```bash&#10;   mvn spring-boot:run&#10;   ```&#10;4. Access Swagger UI at `http://localhost:8080/swagger-ui/index.html`&#10;&#10;## Configuration&#10;&#10;The Swagger configuration is located in:&#10;- `SwaggerConfig.java` - Main Swagger configuration&#10;- `application.yml` - SpringDoc settings&#10;- `ApiResponse.java` - Standard response wrapper&#10;- `GlobalExceptionHandler.java` - Global error handling&#10;- `ApiResponseWrapperFilter.java` - Response wrapping filter" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

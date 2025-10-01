@@ -12,9 +12,26 @@ spring:
         dialect: org.hibernate.dialect.SQLServerDialect
     hibernate:
       ddl-auto: update
+  cloud:
+    compatibility-verifier:
+      enabled: false
 
 server:
   port: 8081
+
+# SpringDoc OpenAPI Configuration
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  show-actuator: true
+  group-configs:
+    - group: 'account-service'
+      display-name: 'Account Service API'
+      paths-to-match: '/**'
 
 eureka:
   client:
@@ -22,4 +39,3 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
-    ip-address: 127.0.0.1

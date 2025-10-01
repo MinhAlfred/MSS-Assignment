@@ -17,7 +17,21 @@ spring:
       enabled: false
 
 server:
-  port: 8080
+  port: 8083
+
+# SpringDoc OpenAPI Configuration
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  show-actuator: true
+  group-configs:
+    - group: 'order-service'
+      display-name: 'Order Service API'
+      paths-to-match: '/**'
 
 orchid:
   server:
