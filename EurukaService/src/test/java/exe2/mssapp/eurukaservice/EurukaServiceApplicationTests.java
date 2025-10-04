@@ -1,10 +1,10 @@
-package exe2.learningapp.erukaservice;
+package exe2.mssapp.eurukaservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ErukaServiceApplicationTests {
+class EurukaServiceApplicationTests {
 
     @Test
     void contextLoads() {

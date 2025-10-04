@@ -6,9 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ErukaService" />
+        <module name="EurukaService" />
       </profile>
-      <profile name="Annotation profile for ApiGateway" enabled="true">
+      <profile name="Annotation profile for AccountService" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
+        </processorPath>
+        <module name="AccountService" />
+      </profile>
+      <profile name="Annotation profile for OrderService" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -16,7 +26,6 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
         </processorPath>
         <module name="OrderService" />
-        <module name="AccountService" />
         <module name="ApiGateway" />
         <module name="OrchidService" />
       </profile>
@@ -26,7 +35,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AccountService" options="-parameters" />
       <module name="ApiGateway" options="-parameters" />
-      <module name="ErukaService" options="-parameters" />
+      <module name="EurukaService" options="-parameters" />
       <module name="OrchidService" options="-parameters" />
       <module name="OrderService" options="-parameters" />
     </option>
